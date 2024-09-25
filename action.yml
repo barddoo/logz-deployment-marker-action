@@ -1,4 +1,4 @@
-name: 'aNew Logz.io Application Deployment Marker'
+name: 'New Logz.io Application Deployment Marker'
 author: 'Charles Fonseca (barddoo)'
 description: 'Apply a New Logz application deployment marker to an application that is monitored by Logz.'
 branding:
