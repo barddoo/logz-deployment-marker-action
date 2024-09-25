@@ -1,4 +1,4 @@
-name: 'New Logz.io Application Deployment Marker'
+name: 'aNew Logz.io Application Deployment Marker'
 author: 'Charles Fonseca (barddoo)'
 description: 'Apply a New Logz application deployment marker to an application that is monitored by Logz.'
 branding:
@@ -19,7 +19,7 @@ inputs:
     description: 'Add a description to provide additional detail. Default: <none>'
     required: false
   metadata_json:
-    description: 'Add metadata to provide additional detail. Default: <none>'
+    description: 'Add metadata to provide additional detail. It must be a valid JSON object or array Default: <none>'
     required: false
 runs:
   using: 'docker'
