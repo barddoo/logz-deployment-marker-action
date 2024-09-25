@@ -1,0 +1,32 @@
+name: 'New Logz.io Application Deployment Marker'
+author: 'Charles Fonseca (barddoo)'
+description: 'Apply a New Logz application deployment marker to an application that is monitored by Logz.'
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
+inputs:
+  apiToken:
+    description: 'Your Logz API Token.'
+    required: true
+  title:
+    description: 'Specify a marker title, for example, a service name. The title appears in the Deployments list your Exceptions tab.'
+    required: true
+  tag:
+    description: 'Specify DEPLOYMENT for the Deployment marker to appear in the Deployments list in your Exceptions tab. Default: OTHER'
+    required: false
+    default: 'OTHER'
+  description:
+    description: 'Add a description to provide additional detail. Default: <none>'
+    required: false
+  metadata_json:
+    description: 'Add metadata to provide additional detail. Default: <none>'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    API_TOKEN: ${{inputs.apiToken}}
+    TITLE: ${{inputs.title}}
+    TAG: ${{inputs.tag}}
+    DESCRIPTION: ${{inputs.description}}
+    METADATA: ${{inputs.metadata}}
