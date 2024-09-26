@@ -21,7 +21,7 @@ curl -L -X POST 'https://api.logz.io/v2/markers/create-markers' \
   \"markers\": [
     {
       \"title\": \"${TITLE}\",
-      \"ta\": \"${TAG}\",
+      \"tag\": \"${TAG}\",
       \"timestamp\": ${CURRENT_TIME},
       \"description\": \"${DESCRIPTION}\",
       \"metadata\": ${METADATA}
